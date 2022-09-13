@@ -1,0 +1,19 @@
+
+rs12 (gjm@research.att.com) Fri May  8 15:53:48 EDT 1992
+
+    This package includes the following:
+
+	rs12.h		the deciphered (S-550) sample-disk format
+	raw8.c		convert sample data to an 8-bit raw sample file
+	samprint.c	detailed sample-disk dump in ASCII
+	samlabel.c	print sample-disk label and contents
+
+    The sources are copyrighted but freely distributable for your own
+    non-comercial use.  Thanks to Pete Lyall for samdisk so that this
+    could be done.
+
+    I'd be interested in seeing the following:
+	1) an Amiga 8SVX converter
+
+    Gary J. Murakami
+    gjm@research.att.com
