@@ -17,7 +17,7 @@
 typedef unsigned char byte;
 
 typedef struct systemProgram
-{	char	data[0176000];		/* 0xFC00 == 64512 */
+{	char	data[0176000];		/* 0xFC00 hex == 64512 dec == 017600 oct */
 } SystemProgram;
 
 typedef struct patchParameter

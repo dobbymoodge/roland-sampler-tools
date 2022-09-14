@@ -66,7 +66,7 @@ printDummy(char * n, int len, byte * p)
 void
 printSystemProgram(SystemProgram * p)
 {
-	printf("%24s[%s]\n", "data", "0000000:0176000");
+	printf("%24s[%s]\n", "data", "0000000:0176000 (octal)");
 }
 
 char * sKeyMode[] = {"Normal","V-Sw","X-Fade","V-Mix","Unison","","",""};
@@ -81,7 +81,7 @@ printPatchParameter(PatchParameter * p)
 {
 	int i;
 
-	printf("%24s[1:12]\t%s\t\"%12s\"\n","patchName","ASCII",p->patchName);
+	printf("%24s[1:12]\t%s\t\"%12.12s\"\n","patchName","ASCII",p->patchName);
 	printf("%24s\t%s\t%d\n","bendRange","0-11",p->bendRange);
 	printDummy("dummy1", 1, p->dummy1);
 	printf("%24s\t%s\t%d\n","afterTouchSense","0-127",p->afterTouchSense);
@@ -397,4 +397,3 @@ main(int argc, char ** argv)
 	}
 	exit(0);
 }
-1
