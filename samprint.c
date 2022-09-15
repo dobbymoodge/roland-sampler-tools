@@ -338,9 +338,15 @@ printToneList(ToneList * p)
 void
 printWaveData(WaveData * p)
 {
-	int	si;
-	for (si = 0; si < SamplesPerSegment; si++)
-		printf("[%d]\t%d\n", si, sample(p->data, si));
+	int	si, index_12b, sa, sb;
+	for (si = 0; si < SamplesPerSegment; si++) {
+          index_12b = si*3/2;
+          sa = p->data[index_12b];
+          sb = p->data[1+index_12b];
+          /* printf("[%d]\t%d\n", si, sample(p->data, si)); */
+          printf("[%d] (%02x %02x) odd?: %c\t%d\n", si, sa, sb,
+                 (si % 2)?'y':'n', sample(p->data, si));
+        }
 }
 
 void
